@@ -1,0 +1,20 @@
+Group 14
+
+C Vishwesh, 140050031		100%
+Saurabh Garg, 140070003		100%
+Aviral Kumar, 140070031		100%
+
+Honor Code: 
+I pledge on my honour that I have not given or received any unauthorized assistance on this assignment or any previous task. 
+
+Citations:
+1. www.stackoverflow.com
+2. http://www.javatpoint.com/java-swing 
+3. http://alvinalexander.com/java/joptionpane-showinputdialog-examples
+4. https://docs.oracle.com/javase/tutorial/uiswing/components/dialog.html
+
+Answer to Q.1 ---------------------------------------
+The error was that the JPanel variable controlPanel had not been initialised, that is it was not allocated memory using new (no Constructor was called). So we commented out that line and the code was working fine.
+
+The output is that a Box pops up at the top left corner of the screen and in it is written the line "I am a basic GUI".
+

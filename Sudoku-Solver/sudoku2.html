@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+	<meta charset="utf-8">
+        <title>Killer Sudoku </title>
+        <style>
+            .cell{
+                width: 14px;
+                padding-bottom: 0px;
+                padding-left: 8px;
+                padding-right: 5px;
+                padding-top: 3px;
+                color:black;
+                font-size: 1.6em;
+                font-weight: bold;
+                margin: 1px;
+                right:0px;
+                text-align: center;
+            }
+            .data{
+                margin-left: 10px;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                
+                padding-right: 0px;
+                padding-top: 2px;
+                width: 48px;
+                height: 48px;
+                border: solid 2px;
+                border-color: black;
+                padding-bottom: 0px;
+                z-index: -1;
+            }
+            #mytbl{
+                z-index: -2;
+                border: solid 5px;
+                border-collapse: collapse;   
+            }
+
+            #val0, #val1, #val7, #val16, #val20, #val21, #val27, #val30, #val36, #val44, #val47, #val50, #val53, #val55, #val56, #val59,                 #val60, #val76, #val77, #val78  {
+                background-color: rgba(255, 255, 77, 0.95);
+            }
+            
+            #val2, #val3, #val4, #val6, #val8, #val15, #val17, #val23, #val26, #val32, #val35, #val37, #val38, #val41, #val46, #val58,                   #val61, #val62, #val64, #val66, #val67, #val70, #val71, #val73, #val75{
+                background-color: #75fa63;     
+            }
+            
+             #val11, #val12, #val28, #val29, #val31, #val34, #val43, #val42, #val40, #val49, #val65, #val74, #val68, #val69  {
+                background-color:pink;
+            }
+            
+             #val5, #val14, #val13, #val22, #val24, #val25, #val9, #val10, #val18, #val19, #val33, #val39, #val48,                                        #val57,#val45,#val54,#val63,#val72,#val79,#val80,#val51,#val52 {
+                background-color:skyblue;
+                }
+            
+            #value0, #value1, #value7, #value16, #value20, #value21, #value27, #value30, #value36, #value44, #value47, #value50, #value53,               #value55, #value56, #value59, #value60, #value76, #value77, #value78  {
+                background-color: rgba(255, 255, 77, 0.95);
+                border:none;
+            }
+            
+            
+            #value2, #value3, #value4, #value6, #value8, #value15, #value17, #value23, #value26, #value32, #value35, #value37, #value38,                 #value41, #value46, #value58, #value61, #value62, #value64, #value66, #value67, #value70, #value71, #value73, #value75{
+                background-color: #75fa63;
+                border:none;
+            }
+            
+            
+            #value11, #value12, #value28, #value29, #value31, #value34, #value43, #value42, #value40, #value49, #value65, #value74,                     #value68, #value69  {
+                background-color:pink;
+                border:none;
+            }
+            
+            #value5, #value14, #value13, #value22, #value24, #value25, #value9, #value10, #value18, #value19, #value33, #value39, #value48,             #value57,#value45,#value54,#value63,#value72,#value79,#value80,#value51,#value52 {
+                background-color:skyblue;
+                border:none;
+             }
+            
+            #val3,#val6,#val12,#val15,#val21,#val24,#val30,#val33,#val39,#val42,#val48,#val51,#val57,#val60,#val66,#val69,#val75,#val78{
+                border-left:solid 5px;
+                border-left-color: black;
+            }
+            
+            #val18,#val19,#val20,#val21,#val22,#val23,#val24,#val25,#val26,#val45,#val46,#val47,#val48,#val49,#val50,#val51,#val52,#val53{
+             border-bottom:solid 5px;
+             border-bottom-color: black
+            }
+    
+            #val0, #val2, #val5, #val6, #val7, #val8, #val9, #val11, #val20, #val23, #val24, #val27, #val28, #val31, #val34, #val37, #val39,             #val44, #val45, #val47, #val50, #val51, #val58, #val61, #val64, #val65, #val68, #val76, #val79{
+                padding-top: 2px;
+                padding-left: 3px; 
+                padding-bottom: 0px;
+                vertical-align: middle !important;
+            }
+
+            #val0, #val2, #val5, #val6, #val7, #val8, #val9, #val11, #val20, #val23, #val24, #val27, #val28, #val31, #val34, #val37,             #val39, #val44, #val45, #val47, #val50, #val51, #val58, #val61, #val64, #val65, #val68, #val76, #val79 input {
+	               padding-bottom: 0px;
+            }
+            
+        </style>
+        <script type="text/javascript" src="sudoku2.js" > </script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <form>
+            <center>
+            <table id="mytbl">
+           <tr>
+               <td class="data" id="val0"> <sup style="font-size:14px; top:1em; vertical-align:top; position:fixed;">3</sup>                                <div align="center"> <input type="text" class="cell" id="value0">   </div> </td>
+                
+               <td class="data" id="val1"><div align="center" style="padding-bottom:0px;"> <input type="text" class="cell"                         id="value1"> </div>  </td>
+            
+                <td class="data" id="val2"><sup style="font-size:14px; left=0px; vertical-align:top; top:1em; position:fixed;">5</sup> 
+                <center> <input type="text" class="cell" id="value2">   </center> </td>
+                <td class="data" id="val3"> <div align="center" width="60px"> <input type="text" class="cell" id="value3"> </div> </td>
+                <td class="data" id="val4"> <center><input type="text" class="cell" id="value4">   </center></td> 
+                <td class="data" id="val5"> <sup style="font-size:14px; left=0px; vertical-align:top; top:1em;  position:fixed;">22</sup>                   <center><input type="text" class="cell" id="value5">   </center> </td>
+                <td class="data" id="val6"><sup style="font-size:14px; left=0px; vertical-align:top; top:1em; position:fixed;">4</sup>                       <center><input type="text" class="cell" id="value6">   </center> </td>
+                <td class="data" id="val7"><sup style="font-size:14px; left=0px; vertical-align:top; top:1em; position:fixed;">16</sup>                      <center><input type="text" class="cell" id="value7">  </center> </td>
+                <td class="data" id="val8"><sup style="font-size:14px; left=0px; vertical-align:top; top:1em; position:fixed;">15</sup>                      <center> <input type="text" class="cell" id="value8">  </center> </td>
+            </tr>
+
+            <tr>
+                <td class="data" id="val9"> <sup style="font-size:14px; left=0px; vertical-align:top; top:4.7em; position:fixed;">25</sup>                   <center><input type="text" class="cell" id="value9">   </center> </td>
+                <td class="data" id="val10"> <center><input type="text" class="cell" id="value10">  </center> </td>             
+                <td class="data" id="val11"><sup style="font-size:14px; left=0px; vertical-align:top; top:4.7em; position:fixed;">17</sup>                   <center> <input type="text" class="cell" id="value11">   </center> </td>
+                <td class="data" id="val12"> <center> <input type="text" class="cell" id="value12">   </center> </td>
+                <td class="data" id="val13"> <center><input type="text" class="cell" id="value13">   </center></td>
+                <td class="data" id="val14"> <center><input type="text" class="cell" id="value14">   </center></td>
+                <td class="data" id="val15"> <center><input type="text" class="cell" id="value15">   </center></td>
+                <td class="data" id="val16"> <center><input type="text" class="cell" id="value16">   </center> </td>
+                <td class="data" id="val17"> <center><input type="text" class="cell" id="value17">   </center> </td>
+            </tr>
+            <tr>
+                <td class="data" id="val18"><center> <input type="text" class="cell" id="value18">  </center> </td>
+                <td class="data" id="val19"><center> <input type="text" class="cell" id="value19">   </center></td>
+                <td class="data" id="val20"> <sup style="font-size:14px; left=0px; vertical-align:top; top:8.4em; position:fixed;">9</sup>                    <center><input type="text" class="cell" id="value20"> </center> </td>
+                <td class="data" id="val21"> <center><input type="text" class="cell" id="value21">  </center> </td>
+                <td class="data" id="val22"> <center><input type="text" class="cell" id="value22">  </center></td>
+                <td class="data" id="val23"> <center><input type="text" class="cell" id="value23">  </center> </td>
+                <td class="data" id="val24"> <center><input type="text" class="cell" id="value24">  </center> </td>
+                <td class="data" id="val25"> <center><input type="text" class="cell" id="value25">  </center> </td>
+                <td class="data" id="val26"> <center><input type="text" class="cell" id="value26">  </center> </td>
+            </tr>
+            <tr>
+                <td class="data" id="val27"><sup style="font-size:14px; left=0px; vertical-align:top; top:12.2em; position:fixed;">6</sup>                   <center><input type="text" class="cell" id="value27">  </center> </td>
+                <td class="data" id="val28"><sup style="font-size:14px; left=0px; vertical-align:top; top:12.2em; position:fixed;">14</sup>                 <center><input type="text" class="cell" id="value28"> </center> </td>
+                <td class="data" id="val29"><center> <input type="text" class="cell" id="value29">  </center> </td>
+                <td class="data" id="val30"><center><input type="text" class="cell" id="value30">  </center> </td>
+                <td class="data" id="val31"><sup style="font-size:14px; left=0px; vertical-align:top; top:12.2em; position:fixed;">17</sup>                 <center> <input type="text" class="cell" id="value31">  </center> </td>
+                <td class="data" id="val32"> <center><input type="text" class="cell" id="value32">   </center></td>
+                <td class="data" id="val33"> <center><input type="text" class="cell" id="value33">  </center> </td>
+                <td class="data" id="val34"><sup style="font-size:14px; left=0px; vertical-align:top; top:12.2em; position:fixed;">17</sup>                 <center> <input type="text" class="cell" id="value34"></center>  </td>
+                <td class="data" id="val35"> <center><input type="text" class="cell" id="value35">  </center> </td>
+            </tr>
+            <tr>
+                <td class="data" id="val36"> <center><input type="text" class="cell" id="value36">  </center></td>
+                <td class="data" id="val37"><sup style="font-size:14px; left=0px; vertical-align:top; top:15.9em; position:fixed;">13</sup>                 <center> <input type="text" class="cell" id="value37">   </center> </td>
+                <td class="data" id="val38"><center> <input type="text" class="cell" id="value38">  </center></td>
+                <td class="data" id="val39"><sup style="font-size:14px; left=0px; vertical-align:top; top:15.9em; position:fixed;">20</sup>                 <center> <input type="text" class="cell" id="value39">   </center> </td>
+                <td class="data" id="val40"> <center><input type="text" class="cell" id="value40">  </center> </td>
+                <td class="data" id="val41"> <center><input type="text" class="cell" id="value41">   </center></td>
+                <td class="data" id="val42"> <center><input type="text" class="cell" id="value42">  </center> </td>
+                <td class="data" id="val43"> <center><input type="text" class="cell" id="value43">  </center> </td>
+                <td class="data" id="val44"> <sup style="font-size:14px; left=0px; vertical-align:top; top:15.9em; position:fixed;">12</sup>                 <center><input type="text" class="cell" id="value44">   </center> </td>
+            </tr>
+            <tr>
+                <td class="data" id="val45"> <sup style="font-size:14px; left=0px; vertical-align:top; top:19.6em; position:fixed;">27</sup>                 <center> <input type="text" class="cell" id="value45">   </center> </td>
+                <td class="data" id="val46"> <center><input type="text" class="cell" id="value46">  </center> </td>
+                <td class="data" id="val47"><sup style="font-size:14px; left=0px; vertical-align:top; top:19.6em; position:fixed;">6</sup>                   <center> <input type="text" class="cell" id="value47">   </center> </td>
+                <td class="data" id="val48"> <center><input type="text" class="cell" id="value48">  </center> </td>
+                <td class="data" id="val49"> <center><input type="text" class="cell" id="value49">  </center> </td>
+                <td class="data" id="val50"> <sup style="font-size:14px; left=0px; vertical-align:top; top:19.6em; position:fixed;">20</sup>                 <center> <input type="text" class="cell" id="value50">   </center> </td>
+                <td class="data" id="val51"><sup style="font-size:14px; left=0px; vertical-align:top; top:19.6em; position:fixed;">6</sup>                   <center> <input type="text" class="cell" id="value51">   </center> </td>
+                <td class="data" id="val52"> <center><input type="text" class="cell" id="value52">  </center> </td>
+                <td class="data" id="val53"> <center><input type="text" class="cell" id="value53">  </center> </td>
+            </tr>
+            <tr>
+                <td class="data" id="val54"> <center><input type="text" class="cell" id="value54">  </center> </td>
+                <td class="data" id="val55"> <center><input type="text" class="cell" id="value55">  </center> </td>
+                <td class="data" id="val56"> <center><input type="text" class="cell" id="value56">  </center> </td>
+                <td class="data" id="val57"> <center><input type="text" class="cell" id="value57">  </center> </td>
+                <td class="data" id="val58"> <sup style="font-size:14px; left=0px; vertical-align:top; top:23.5em; position:fixed;">10</sup>                 <center> <input type="text" class="cell" id="value58">   </center> </td>
+                <td class="data" id="val59"> <center><input type="text" class="cell" id="value59">  </center> </td>
+                <td class="data" id="val60"> <center><input type="text" class="cell" id="value60">  </center> </td>
+                <td class="data" id="val61"> <sup style="font-size:14px; left=0px; vertical-align:top; top:23.5em;                                   position:fixed;">14</sup> <center> <input type="text" class="cell" id="value61">   </center> </td>
+                <td class="data" id="val62"> <center><input type="text" class="cell" id="value62">   </center></td>
+            </tr>
+            <tr>
+                <td class="data" id="val63"> <center><input type="text" class="cell" id="value63"> </center> </td>
+                <td class="data" id="val64">  <sup style="font-size:14px; left=0px; vertical-align:top; top:27.2em; position:fixed;">8</sup>                 <center><input type="text" class="cell" id="value64">   </center> </td>
+                <td class="data" id="val65"> <sup style="font-size:14px; left=0px; vertical-align:top; top:27.2em; position:fixed;">16</sup>                 <center> <input type="text" class="cell" id="value65">   </center> </td>
+                <td class="data" id="val66"> <center><input type="text" class="cell" id="value66">   </center></td>
+                <td class="data" id="val67"> <center><input type="text" class="cell" id="value67">  </center> </td>
+                <td class="data" id="val68"> <sup style="font-size:14px; left=0px; vertical-align:top; top:27.2em; position:fixed;">15</sup>                 <center><input type="text" class="cell" id="value68">   </center> </td>
+                <td class="data" id="val69"> <center><input type="text" class="cell" id="value69">   </center></td>
+                <td class="data" id="val70"> <center><input type="text" class="cell" id="value70">   </center></td>
+                <td class="data" id="val71"> <center><input type="text" class="cell" id="value71">   </center></td>
+            </tr>
+            <tr>
+                <td class="data" id="val72"> <center><input type="text" class="cell" id="value72">   </center></td>
+                <td class="data" id="val73"> <center><input type="text" class="cell" id="value73">  </center> </td>
+                <td class="data" id="val74"> <center><input type="text" class="cell" id="value74">  </center> </td>
+                <td class="data" id="val75"> <center><input type="text" class="cell" id="value75">  </center> </td>
+                <td class="data" id="val76"> <sup style="font-size:14px; left=0px; vertical-align:top; top:31em; position:fixed;">13</sup>                   <center><input type="text" class="cell" id="value76">   </center> </td>
+                <td class="data" id="val77"> <center><input type="text" class="cell" id="value77">  </center> </td>
+                <td class="data" id="val78"> <center><input type="text" class="cell" id="value78">  </center> </td>
+                <td class="data" id="val79">  <sup style="font-size:14px; left=0px; vertical-align:top; top:31em; position:fixed;">17</sup>                 <center><input type="text" class="cell" id="value79">   </center> </td>
+                <td class="data" id="val80"> <center><input type="text" class="cell" id="value80">  </center> </td>
+            </tr>
+            </table>
+            </center> <br> <br>
+            <center> <button type="button" onclick="verify()"> Submit </button> </center> <br>
+            <center> <input type="reset" value="Reset" onClick="reset()" id="res"></center>
+            </form>
+        </div>
+    </body>
+
+</html>

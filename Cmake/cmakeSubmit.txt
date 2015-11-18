@@ -1,0 +1,1 @@
+2. The size of dynamic library is approx. 7 times the static library .The size of all three executables are same equal to 13.5 Kb. They are generated in build folder. 

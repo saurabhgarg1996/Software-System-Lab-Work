@@ -1,0 +1,13 @@
+(a) We are working with Box2D project in cs251_base folder
+(b) After studying Makefile.orig we came to know how a Makefile is written. 
+(c) In standard UNIX system Makefile and makefile do the same thing. But when both are present makefile is at higher priority then Makefile 	and thus makefile is executed.
+(d) Target dirs created two folders mybins and myobjs if they were not present else there was no effect.
+(e) Target b2dsetup automatically installs Box2D if there was no Box2D file in external/include. We followed instructions given in 	       	   cs251_README.txt .
+(f) This task was collectively completed in previous mentioned tasks.
+(g) The cpp files were compiled and their respective object files were placed to myobjs folder.
+(h) Object files were linked to library files and then converted to executables.
+(i) We have used two targets one for objects and other one for executables. We have not included it in make all thus by default non-optimised 	  one will run.  
+(j) Target clean removes object files and executables from myobjs and mybins.
+(k) Target distclean removes files from external/include and external/lib and Box2D from external/src/.
+(l) Target makesubmission creates lab05_g14.tar.gz file which contains src and makefile.
+

@@ -1,0 +1,78 @@
+Breakpoint 1 at 0x4006eb: file err_unchanged.c, line 42.
+No symbol "curr" in current context.
+No symbol "curr" in current context.
+Starting program: /users/ug14/aviral/Lab09_group14_inlab/a.out 
+
+Breakpoint 1, main () at err_unchanged.c:42
+42	      curr = t;
+Cannot access memory at address 0x0
+$1 = (struct ListNode *) 0x0
+$2 = (struct ListNode *) 0x0
+Cannot access memory at address 0x0
+37	  for (i = 0; i < 7; i++) {
+$3 = (struct ListNode *) 0x602010
+$4 = (struct ListNode *) 0x0
+$5 = 1
+Cannot access memory at address 0x0
+38	    struct ListNode *t =       (struct ListNode *) malloc(sizeof(struct ListNode));
+39	    t->val = i + 1;
+40	    t->next = NULL;
+41	    if (head == NULL) {
+
+Breakpoint 1, main () at err_unchanged.c:42
+42	      curr = t;
+37	  for (i = 0; i < 7; i++) {
+$6 = (struct ListNode *) 0x602030
+$7 = 2
+$8 = (struct ListNode *) 0x0
+No breakpoints or watchpoints.
+Breakpoint 2 at 0x400717: file err_unchanged.c, line 50.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /users/ug14/aviral/Lab09_group14_inlab/a.out 
+
+Breakpoint 2, main () at err_unchanged.c:50
+50	  rev_traverse = reverseList(head);
+$9 = (struct ListNode *) 0x4004e0 <_start>
+$10 = -1991643855
+51	  while (rev_traverse != NULL) {
+$11 = (struct ListNode *) 0x0
+Cannot access memory at address 0x0
+Breakpoint 3 at 0x400642: file err_unchanged.c, line 22.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /users/ug14/aviral/Lab09_group14_inlab/a.out 
+
+Breakpoint 3, reverseList (head=0x0) at err_unchanged.c:22
+22	    if (head == NULL) 	return head;
+$12 = (struct ListNode *) 0x0
+Breakpoint 4 at 0x400674: file err_unchanged.c, line 27.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /users/ug14/aviral/Lab09_group14_inlab/a.out 
+[Inferior 1 (process 7092) exited with code 012]
+Breakpoint 2 at 0x40073b: /users/ug14/aviral/Lab09_group14_inlab/err.c:52. (2 locations)
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   <MULTIPLE>         
+2.1                         y     0x000000000040073b in main at err.c:52
+2.2                         y     0x00007ffff7b0bd04 in convert_and_print 
+                                                   at err.c:52
+No breakpoints or watchpoints.
+Breakpoint 3 at 0x40073b: /users/ug14/aviral/Lab09_group14_inlab/err.c:52. (2 locations)
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /users/ug14/aviral/Lab09_group14_inlab/a.out 
+
+Breakpoint 3, main () at err.c:52
+52	  while (rev_traverse != NULL) {
+$7 = (struct ListNode *) 0x6020d0
+$8 = 7
+$9 = (struct ListNode *) 0x602010
+$10 = 1
+$11 = (struct ListNode *) 0x6020d0
+$12 = 7
+A debugging session is active.
+
+	Inferior 1 [process 7798] will be killed.
+
+Quit anyway? (y or n) 

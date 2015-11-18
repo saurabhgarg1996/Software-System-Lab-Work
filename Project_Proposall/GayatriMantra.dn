@@ -1,0 +1,12 @@
+\documentclass[12pt]{article}
+\usepackage{devanagari}
+@hindi
+\begin{document}
+\section*{}
+\center
+{\dn .o}\\
+{\dn bhUrbhuv.h sv.h}\\
+{\dn tatsaviturvara.ny.m} \\
+{\dn bhargo devasya dhiimahi}\\
+{\dn dhiyo yo n.h pracodaayat ||}\\ 
+\end{document}

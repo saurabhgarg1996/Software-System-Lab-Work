@@ -1,0 +1,23 @@
+Group 14
+
+C Vishwesh, 140050031		95%
+Saurabh Garg, 140070003		95%
+Aviral Kumar, 140070031		100%
+
+Honor Code: 
+I pledge on my honour that I have not given or received any unauthorized assistance on this assignment or any previous task. 
+
+
+Citations:
+1. http://www.killersudokuonline.com/
+2. https://en.wikipedia.org/wiki/Killer_sudoku
+3. http://www.w3schools.com/
+4. http://www.w3schools.com/jsref/obj_window.asp
+5. http://stackoverflow.com/questions/10156474/javascript-calling-a-function-on-window-object/
+
+
+What we want to tell you:
+
+Open Sudoku.html. Enter values in each box by clicking respective boxes in the table. Don't resize the tab and keep it in full screen view. When all values are there i.e all values are entered in box press Submit button to verify your solution. To reset sudoko press Reset button.
+An alert is sent to the user telling the correctness of the answer. If the answer is not correct, the alert prompts user to try again. This might create additional dialog boxes (alerts) so you will have to close them by choosing the option to prevent such boxes. Reload/Reset the sudoku and try again.
+ 
